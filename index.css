@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+    --font: 'Manrope', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--Dark-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 50px 50px 90px;
+    border-radius: 16px;
+    gap: 20px;
+    text-align: center;
+}
+
+h1{
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+.quote-container{
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+q{
+    color: var(--Light-Cyan);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.fade-out{
+    animation: fade-out 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-in{
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+.divider{
+    width: 100%;
+    padding: 10px 0;
+}
+
+
+button{
+    background-color: var(--Neon-Green);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 16px;
+    cursor: pointer;
+    transition: .15s;
+    margin-bottom: -120px;
+    transition: .4s;
+}
+
+
+button:hover{
+    box-shadow: var(--Neon-Green) 0px 0px 24px 0px;
+    transition: .15s;
+}
+
+button img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: -2px;
+}
+
+.btn-active{
+    box-shadow: var(--Neon-Green) 0px 0px 24px 0px;
+    cursor: not-allowed;
+}
+
+.dice-animation{
+    animation: rotate 1.2s;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
