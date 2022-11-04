@@ -23,6 +23,12 @@ body{
     height: 100vh;
 }
 
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container{
     background-color: var(--Dark-Grayish-Blue);
     display: flex;
